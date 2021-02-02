@@ -6,8 +6,8 @@ import utilities.WebDriverFactory;
 
 public class SuitStarter {
 
-   // @BeforeSuite
-   // public void suitStarter(){
+    // @BeforeSuite
+    // public void suitStarter(){
     //    ConfigurationReader.readProperty();
     //}
 
