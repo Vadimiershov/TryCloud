@@ -8,5 +8,4 @@ public class PageGenerator {
     public PageGenerator(){
         PageFactory.initElements(WebDriverFactory.getDriver(),this);
     }
-
 }
