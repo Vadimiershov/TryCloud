@@ -1,4 +1,4 @@
-package tests;
+package tests.US3_TC5_UploadFile;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -8,15 +8,13 @@ import pageObjects.LogInPage;
 import utilities.ConfigurationReader;
 import utilities.WebDriverFactory;
 
-public class US3_TC5_UploadFile {
-
-
+public class UploadFile {
     @Test(description = "Verify users can upload a file directly to the homepage")
     public void uploadFile() {
         // 1. Login as a User
         WebDriverFactory.setUpDriver();
         WebDriverFactory.navigateToURL(ConfigurationReader.getProperties("environment"));
-       //WebDriverFactory.navigateToURL("http://app.trycloud.net/index.php/login");
+        //WebDriverFactory.navigateToURL("http://app.trycloud.net/index.php/login");
 
         LogInPage logInPage = new LogInPage();
         logInPage.UserLogIn.sendKeys("User26");
@@ -43,7 +41,5 @@ public class US3_TC5_UploadFile {
         WebElement fileUploaded = WebDriverFactory.getDriver().findElement(By.xpath("//span[@class='nametext']"));
         Assert.assertTrue(fileUploaded.isDisplayed(), "File is not displayed on the page");
 
-
     }
-
 }
