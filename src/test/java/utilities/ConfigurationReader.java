@@ -17,7 +17,7 @@ public class ConfigurationReader {
     //public static void readProperty() {
 static {
         try {
-            FileInputStream inputStream = new FileInputStream(new File(path));
+            FileInputStream inputStream = new FileInputStream(path);
             properties.load(inputStream);
         } catch (IOException e) {
             e.printStackTrace();
