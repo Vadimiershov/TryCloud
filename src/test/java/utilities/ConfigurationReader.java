@@ -11,7 +11,6 @@ public class ConfigurationReader {
 
     private static final Properties properties = new Properties();
     private static final String path = "configuration.properties";
-
     //public static void readProperty() {
 static {
         try {
