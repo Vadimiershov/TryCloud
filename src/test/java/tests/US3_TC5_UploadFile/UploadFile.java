@@ -13,7 +13,7 @@ import utilities.WebDriverFactory;
 public class UploadFile {
 
     @BeforeClass
-    public void setUPDriver() {
+    public void setUpDriver() {
         WebDriverFactory.setUpDriver();
         // WebDriverFactory.navigateToURL(ConfigurationReader.getProperties("environment"));
         WebDriverFactory.navigateToURL("http://qa3.trycloud.net");
@@ -31,14 +31,14 @@ public class UploadFile {
 
         WebElement files = WebDriverFactory.getDriver().findElement(By.xpath("//a[@href='/index.php/apps/files/']"));
         // @FindBy(how = How.XPATH, using = "//a[@href='/index.php/apps/files/']")
-        //    public WebElement filesLink;
+        //    public WebElement filesLink; !!!
         files.click();
-
         WebDriverFactory.implicitWait();
+
         // 2. Click the "+" icon on top
         WebElement plusButton = WebDriverFactory.getDriver().findElement(By.xpath("//a[@class='button new']"));
         // @FindBy(how = How.XPATH, using = "a[class='button new']")
-        //    public WebElement plusButton;
+        //  public WebElement plusButton;
         // plusButton.click();
 
         // 3. Click "upload file"
@@ -46,33 +46,23 @@ public class UploadFile {
 
         WebElement uploadFile = WebDriverFactory.getDriver().findElement(By.xpath("//input[@type='file']"));
         // @FindBy(how = How.XPATH, using = "//span[.='Upload file']")
-        //    public WebElement uploadFile;
+        //  public WebElement uploadFile;
 
         // 4. Upload a file
         uploadFile.sendKeys(path);
 
         // 5. Verify the file is displayed on the page
-        // WebElement fileUploaded = WebDriverFactory.getDriver().findElement(By.xpath("//span[.='String pool']"));
-        //  Assert.assertTrue(fileUploaded.isDisplayed(), "File is displayed on the page");
+        WebElement fileUploaded = WebDriverFactory.getDriver().findElement(By.xpath("//*[contains(text(), 'text document')]"));
+        Assert.assertTrue(fileUploaded.isDisplayed(), "File is NOT displayed on the page");
+        WebDriverFactory.implicitWait();
 
-        /*WebDriverFactory.implicitWait();
-
-        if (WebDriverFactory.getDriver().findElement(By.xpath("//span[.='String pool']")).isDisplayed()) {
-            Assert.assertTrue(true, "File is displayed on the page!!!");
-            System.out.println("yes");
-        } else {
-            Assert.assertTrue(false, "File is NOT displayed on the page!");
-            System.out.println("no");
-        }
-*/
     }
 
-/*    @AfterClass
+    @AfterClass
     public void tearDown() {
         WebDriverFactory.killDriver();
-        WebDriverFactory.implicitWait();
-    }*/
+    }
+
 
 
 }
-
