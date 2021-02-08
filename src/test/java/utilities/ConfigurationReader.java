@@ -13,7 +13,6 @@ public class ConfigurationReader {
 
     private static final Properties properties = new Properties();
     private static final String path = "configuration.properties";
-
     //public static void readProperty() {
 static {
         try {
@@ -23,9 +22,6 @@ static {
             e.printStackTrace();
         }
     }
-
-
-
     public static String getProperties(String key){
         return properties.getProperty(key);
     }

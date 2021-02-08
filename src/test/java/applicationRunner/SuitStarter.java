@@ -4,15 +4,11 @@ import org.testng.annotations.BeforeSuite;
 import utilities.ConfigurationReader;
 import utilities.WebDriverFactory;
 
-public class SuitStarter extends ConfigurationReader{
+public class SuitStarter {
 
-    @BeforeSuite
-    public void suitStarter() {
-     String env =   ConfigurationReader.getProperties("environment");
+    // @BeforeSuite
+    // public void suitStarter(){
+    //    ConfigurationReader.readProperty();
+    //}
 
-
-
-
-
-    }
 }
