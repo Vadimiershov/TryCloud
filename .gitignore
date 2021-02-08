@@ -1,4 +1,4 @@
-/target/
-/TryCloud.iml
-/.idea/
-/trycloudautomation.iml
+target/
+TryCloud.iml
+.idea/
+trycloudautomation.iml
