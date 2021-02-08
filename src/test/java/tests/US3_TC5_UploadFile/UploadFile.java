@@ -15,8 +15,8 @@ public class UploadFile {
     @BeforeClass
     public void setUpDriver() {
         WebDriverFactory.setUpDriver();
-        // WebDriverFactory.navigateToURL(ConfigurationReader.getProperties("environment"));
-        WebDriverFactory.navigateToURL("http://qa3.trycloud.net");
+        WebDriverFactory.navigateToURL(ConfigurationReader.getProperties("environment3"));
+       // WebDriverFactory.navigateToURL("http://qa3.trycloud.net");
     }
 
 
@@ -57,11 +57,11 @@ public class UploadFile {
         WebDriverFactory.implicitWait();
 
     }
-
+/*
     @AfterClass
     public void tearDown() {
         WebDriverFactory.killDriver();
-    }
+    }*/
 
 
 
