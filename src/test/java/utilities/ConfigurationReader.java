@@ -22,5 +22,9 @@ static {
     }
     public static String getProperties(String key){
         return properties.getProperty(key);
+
+
+
+
     }
 }
