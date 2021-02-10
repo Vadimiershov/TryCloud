@@ -5,8 +5,9 @@ import utilities.WebDriverFactory;
 
 public class PageGenerator {
 
-    public PageGenerator(){
-        PageFactory.initElements(WebDriverFactory.getDriver(),this);
-
+    public PageGenerator() {
+        PageFactory.initElements(WebDriverFactory.getDriver(), this);
     }
+
+
 }
