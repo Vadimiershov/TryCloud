@@ -86,7 +86,7 @@ public class AccessMainModules extends LogInPage {
      //   WebElement notesLink = WebDriverFactory.getDriver().findElement(By.xpath("(//a[@aria-label='Notes'])[1]"));
     //    Assert.assertTrue(notesLink.isDisplayed());
     //    WebDriverFactory.implicitWait();
-    //
+
     }
 
 
