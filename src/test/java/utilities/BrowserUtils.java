@@ -9,17 +9,8 @@ public class BrowserUtils {
         Actions actions = new Actions(WebDriverFactory.getDriver());
         actions.moveToElement(element).perform();
     }
+}
 
 
-        public static void sleep(int seconds){
-
-            try {
-                Thread.sleep(seconds*1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-
-    }
 
 //
