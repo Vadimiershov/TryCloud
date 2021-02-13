@@ -1,8 +1,9 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="tryCloudSuite">
-    <test name="US3_TC6_CreateFolder">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TryCloud">
+    <test thread-count="5" name="Test">
         <classes>
-            <class name="tests.US3_TC6_CreateFolder.CreateFolder" />
+            <class name="applicationRunner.SuitStarter"/>
         </classes>
-    </test>
-</suite>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
