@@ -34,7 +34,7 @@ public class AccessMainModules extends LogInPage {
         //Verify the user see the modules File:
        WebElement filesLink = WebDriverFactory.getDriver().findElement(By.xpath("//a[@href='/index.php/apps/files/']"));
        Assert.assertTrue(filesLink.isDisplayed());
-       BrowserUtils.sleep(1);
+    //   BrowserUtils.sleep(1);
 
 
        //BrowserUtils.hoover(filesLink);
